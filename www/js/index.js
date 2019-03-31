@@ -50,7 +50,7 @@ var app = {
                 'message: ' + error.message + '\n');
         }
 
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 10000, enableHighAccuracy: true});
 
     },
     // deviceready Event Handler
