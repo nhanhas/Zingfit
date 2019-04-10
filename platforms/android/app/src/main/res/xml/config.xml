@@ -27,7 +27,7 @@
     </feature>
     <allow-navigation href="cdvfile:*" />
     <feature name="Geolocation">
-        <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
     <name>Geolocation</name>
     <description>
