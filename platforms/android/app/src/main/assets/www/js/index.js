@@ -78,9 +78,12 @@ var app = {
                 taggedElement.innerHTML ='ERRO' ;
         }
 
-        navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 10000, enableHighAccuracy: true});
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy: true, timeout: 2*1000, maximumAge: 0});
 
-
+        var navElement = document.getElementById('navigator');
+        navElement.addEventListener('click', function(){
+            navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy: true, timeout: 2*1000, maximumAge: 0});
+        });
 
     }
 
