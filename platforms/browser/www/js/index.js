@@ -78,11 +78,11 @@ var app = {
                 taggedElement.innerHTML ='ERRO' ;
         }
 
-        navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy: true, timeout: 2*1000, maximumAge: 0});
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 30000, enableHighAccuracy: true});
 
         var navElement = document.getElementById('navigator');
         navElement.addEventListener('click', function(){
-            navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy: true, timeout: 2*1000, maximumAge: 0});
+            navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 30000, enableHighAccuracy: true});
         });
 
     }
